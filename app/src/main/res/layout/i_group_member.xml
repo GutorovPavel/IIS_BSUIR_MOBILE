@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:layout_marginBottom="1dp"
+    android:layout_below="@id/group_toolbar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/member_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="Имя Фамилия Отчество"/>
+
+    <TextView
+        android:id="@+id/member_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/member_name"
+        android:layout_marginStart="8dp"
+        tools:text="Староста" />
+
+    <TextView
+        android:id="@+id/member_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:drawablePadding="8dp"
+        tools:text="vadimohkav@gmail.com"
+        android:autoLink="email"
+        android:layout_below="@id/member_position"
+        app:drawableStartCompat="@drawable/ic_round_email_24" />
+
+    <TextView
+        android:id="@+id/member_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:drawablePadding="8dp"
+        android:autoLink="phone"
+        tools:text="+375444673946"
+        android:layout_below="@id/member_email"
+        app:drawableStartCompat="@drawable/ic_round_phone_in_talk_24" />
+
+</RelativeLayout>

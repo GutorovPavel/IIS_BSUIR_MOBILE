@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/fragment_profile">
+    <fragment
+        android:id="@+id/fragment_login"
+        android:name="com.example.iismobile.login.LoginFragment"
+        android:label="Авторизация"
+        tools:layout="@layout/f_login">
+        <argument
+            android:name="logout"
+            app:nullable="false"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_profile"
+        android:name="com.example.iismobile.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/f_profile">
+        <action
+            android:id="@+id/action_profile_logout"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/fragment_login"
+            app:destination="@id/fragment_login"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_group"
+        android:name="com.example.iismobile.group.GroupFragment"
+        android:label="GroupFragment"
+        tools:layout="@layout/f_group" />
+    <fragment
+        android:id="@+id/fragment_markbook"
+        android:name="com.example.iismobile.markbook.MarkBookFragment"
+        android:label="MarkBookFragment"
+        tools:layout="@layout/f_markbook"/>
+
+    <fragment android:id="@+id/fragment_papers"
+        android:name="com.example.iismobile.papers.PapersFragment"
+        android:label="PapersFragment"
+        tools:layout="@layout/f_papers" />
+
+    <fragment android:id="@+id/fragment_sheets"
+        android:name="com.example.iismobile.marksheets.MarkSheetsFragment"
+        android:label="MarkSheetsFragment"
+        tools:layout="@layout/f_mark_sheets" />
+
+    <fragment android:id="@+id/fragment_request_paper"
+        android:name="com.example.iismobile.papers.request.PaperRequestFragment"
+        tools:layout="@layout/f_paper_request"
+        android:label="PaperRequestFragment" />
+
+    <fragment android:id="@+id/fragment_announcements"
+        android:name="com.example.iismobile.announcements.AnnouncementsFragment"
+        android:label="AnnouncementsFragment"
+        tools:layout="@layout/f_announcements" />
+
+    <fragment android:id="@+id/fragment_preferences"
+        android:name="com.example.iismobile.preferences.PreferencesFragment"
+        android:label="PreferencesFragment"
+        tools:layout="@layout/f_preferences" />
+
+</navigation>

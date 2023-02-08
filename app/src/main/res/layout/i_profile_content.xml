@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/papers_badge"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:background="@drawable/b_badge"
+            android:elevation="12dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:translationX="6dp"
+            android:translationY="6dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/button_papers"
+            app:layout_constraintEnd_toEndOf="@+id/button_papers"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/sheets_badge"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:background="@drawable/b_badge"
+            android:elevation="12dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:translationX="6dp"
+            android:translationY="6dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/button_exam_sheets"
+            app:layout_constraintEnd_toEndOf="@+id/button_exam_sheets"
+            tools:text="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_papers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/b_filled_button"
+            android:paddingHorizontal="8dp"
+            android:text="Заказ Справки"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/button_exam_sheets"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_exam_sheets"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/b_filled_button"
+            android:paddingHorizontal="8dp"
+            android:text="Заказ Ведомостички"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_papers"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_settings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/b_outlined_button"
+            android:paddingHorizontal="8dp"
+            android:text="Настройки..."
+            android:textColor="@color/c_outlined_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_exam_sheets" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_skills"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_buttons"
+        android:layout_margin="8dp"
+        android:background="@drawable/b_block"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/skills_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/skills_title"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/skills_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/skills_title"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            tools:itemCount="3"
+            tools:listitem="@layout/i_skill" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_skills"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/b_block"
+        android:padding="8dp">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/info_edit"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:srcCompat="@drawable/ic_round_edit_24"
+            android:background="@android:color/transparent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:tint="@color/colorPrimaryDark"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/info_hint"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="8dp"
+            app:srcCompat="@drawable/ic_round_help_outline_24"
+            android:background="@android:color/transparent"
+            android:layout_toStartOf="@id/info_edit"
+            android:layout_alignParentTop="true"
+            android:tint="@color/colorPrimaryDark"/>
+
+        <!-- should i name it `bio`? -->
+        <!-- or `summary` as api does? -->
+        <TextView
+            android:id="@+id/info_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/info_title"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/profile_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info_title"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginTop="8dp"
+            style="@style/Widget.AppCompat.EditText"
+            tools:hint="@string/no_summary" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_references"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_info"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/b_block"
+        android:padding="8dp">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/reference_add"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:srcCompat="@drawable/ic_round_add_24"
+            android:background="@android:color/transparent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:tint="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/references_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/references_title"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/references_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/references_title"
+            android:layout_marginTop="8dp"
+            tools:itemCount="3"
+            tools:listitem="@layout/i_reference" />
+
+        <TextView
+            android:id="@+id/profile_no_references"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/references_title"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/no_references"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_announcements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_references"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/b_block"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/announcements_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/announcements_title"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/announcements_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/announcements_title"
+            android:layout_marginTop="8dp"
+            tools:itemCount="3"
+            tools:listitem="@layout/i_announcement" />
+
+        <TextView
+            android:id="@+id/announcements_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/announcements_title"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/no_announcements"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

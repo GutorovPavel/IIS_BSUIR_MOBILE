@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">IIS BSUIR</string>
+    <string name="login_prompt">Добро пожаловать в интергированную информационную систему БГУИР</string>
+    <string name="error_stub">Connection lost</string>
+    <string name="login_hint">
+        Для входа в систему используйте учетные данные, что и для доступа в интернет (номер студенческого билета и пароль)
+    </string>
+    <string name="login_submit">Войти</string>
+    <string name="lorem">test</string>
+    <string name="no_internet_error">Похоже вы не подключены к интернету.
+        Включите WiFi или мобильную передачу данных и попробуйте снова :)</string>
+    <string name="unexpected_error">Произошла непредвиденная ошибка
+        %1$s:
+        %2$s</string>
+    <string name="skills_title">Ключенвые навыки</string>
+    <string name="info_title">Дополнительная информация</string>
+    <string name="no_summary">Пока не указано никакой информации…</string>
+    <string name="references_title">Ссылки</string>
+    <string name="no_references">У вас пока нет никаких ссылок…</string>
+    <string name="timeout_error">Сервер не отвечает. Возможно технические неполадки в работе сервиса. Попробуйте повторить попытку позже</string>
+    <string name="dont_remember_label">Запомнить данные для автоматического входа.</string>
+    <string name="dont_remember_hint">Данные будут сохранены только на Вашем устройстве и не будут передаваться третьим лицам. Данные так же не будут доступны другим приложниям</string>
+    <string name="paper_type_all_hint">
+        Если Вы не знаете, какой тип печати в справке нужен, или Вам не нужна гербовая печать, то выбирайте тип справки «Обычная» (как правило, с гербовой печатью справки нужны только для получения банковского кредита на обучение). Выбирайте «Гербовая», если вам нужна справка из СППС.
+    </string>
+    <string name="paper_type_special_hint">
+        Справка с гербовой печатью справки нужны только для получения банковского кредита на обучение или справка из СППС.
+    </string>
+    <string name="paper_request_summary">Справка с <b>%1$s</b> печатью <b>%2$s</b></string>
+    <string name="paper_destination_hint"><![CDATA[Для ввода собственного места назначения справки выберите Деканат -> иное]]></string>
+    <string name="skill_add_title">Добавление навыка</string>
+    <string name="skill_add_hint">Навык…</string>
+    <string name="add_title">Добавить</string>
+    <string name="skill_add_tip">Начните вводить для отображения подсказок</string>
+    <string name="announcements_title">Объявления</string>
+    <string name="no_announcements">Здесь будут отображаться объявления…</string>
+    <string name="summary_submit_title">Обновление информации</string>
+    <string name="summary_submit_message"><![CDATA[После обновления общая информация в профиле будет следующей:<br/><br/><i>%1$s</i><br/><br/>Если все верно, нажмите <b>Применить</b>]]></string>
+    <string name="summary_submit">Применить</string>
+    <string name="cancel">Отменить</string>
+    <string name="info_help"><![CDATA[Общая информация отображается в Вашем профиле и видна другим пользователям, если опция <b>Профиль</b> в <b>настройках доступа</b> включена.<br/><br/>Вы можете написать пару предложений о себе или что угодно другое.<br/><br/><b>P.S.:</b> при попытке добавить текст, содержащий эмоджи, обновить информацию не получится.<i>Это не наше решение, так работает сервер IIS :)</i>]]></string>
+    <string name="remove_skill_fail">Не удалось удалить навык %1$s</string>
+    <string name="schedule_start_of_day">Начало дня</string>
+    <string name="schedule_end_of_day">Конец дня</string>
+    <string name="preferences_title">Настройки</string>
+    <string name="access_preference_rating">Рейтинг</string>
+    <string name="access_preference_profile">Профиль</string>
+    <string name="access_preference_job">В поиске работы</string>
+    <string name="show_title">Отображается</string>
+    <string name="dont_show_title">Не отображается</string>
+    <string name="yes_title">Да</string>
+    <string name="no_title">Нет</string>
+    <string name="preferences_title_access">Доступ</string>
+    <string name="reference_add_title">Добавление ссылки</string>
+    <string name="reference_add_hint">Название ссылки…</string>
+    <string name="reference_add_link_hint">Ссылка…</string>
+
+</resources>
